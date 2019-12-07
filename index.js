@@ -1,7 +1,7 @@
 const aocLoader = require("aoc-loader");
 require("dotenv").config();
 
-const TEST_DAY = process.argv[2] || 5;
+const TEST_DAY = process.argv[2] || 6;
 
 if (!TEST_DAY) {
   throw new Error(
@@ -12,6 +12,6 @@ if (!TEST_DAY) {
 const day = require("./src/day" + TEST_DAY);
 
 aocLoader(2019, TEST_DAY, process.env.AOC_SESSION).then(data => {
-  console.log(`Part 1: ${day.part1(data, 1)}\n`);
-  console.log(`Part 2: ${day.part1(data, 5)}\n`);
+  console.log(`Part 1: ${day.part1(data)}\n`);
+  console.log(`Part 2: ${day.part2(data)}\n`);
 });
